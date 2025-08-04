@@ -5,7 +5,7 @@ services:
     runtime: static
     repo: https://github.com/unleashy/emmanuelle.dev
     buildCommand: corepack enable && yarn install --immutable && yarn build
-    staticPublishPath: build
+    staticPublishPath: ./build
     domains:
       - emmanuelle.dev
       - www.emmanuelle.dev
