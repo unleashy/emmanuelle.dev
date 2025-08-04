@@ -18,7 +18,7 @@ services:
     routes:
       - type: rewrite
         source: /~mori/*
-        destination: https://mori.onrender.com/*
+        destination: https://mori-tciw.onrender.com/*
 
   - type: web
     name: mori
