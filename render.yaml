@@ -1,0 +1,14 @@
+version: 1
+services:
+  - type: web
+    name: emmanuelle.dev
+    runtime: static
+    repo: https://github.com/unleashy/emmanuelle.dev
+    buildCommand: corepack enable && yarn install --immutable && yarn build
+    staticPublishPath: build
+    domains:
+      - emmanuelle.dev
+      - www.emmanuelle.dev
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: true
