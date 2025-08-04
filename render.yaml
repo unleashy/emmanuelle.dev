@@ -16,12 +16,9 @@ services:
         name: Cache-Control
         value: max-age=2147483648, immutable
     routes:
-      - type: redirect
-        source: /~mori
-        destination: /~mori/
       - type: rewrite
-        source: /~mori/*
-        destination: https://mori-tciw.onrender.com/*
+        source: /~mori*
+        destination: https://mori-tciw.onrender.com*
 
   - type: web
     name: mori
