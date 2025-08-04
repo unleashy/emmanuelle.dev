@@ -4,11 +4,37 @@ services:
     name: emmanuelle.dev
     runtime: static
     repo: https://github.com/unleashy/emmanuelle.dev
-    buildCommand: corepack enable && yarn install --immutable && yarn build
-    staticPublishPath: ./build
     domains:
       - emmanuelle.dev
       - www.emmanuelle.dev
+    buildCommand: corepack enable && yarn install --immutable && yarn build
+    staticPublishPath: ./build
+    envVars:
+      - fromGroup: skip-auto-install
+    headers:
+      - path: /_app/immutable/*
+        name: Cache-Control
+        value: max-age=2147483648, immutable
+    routes:
+      - type: rewrite
+        source: /~mori/*
+        destination: https://mori.onrender.com/*
+
+  - type: web
+    name: mori
+    runtime: static
+    repo: https://github.com/unleashy/mori
+    buildCommand: corepack enable && yarn install --immutable && yarn build
+    staticPublishPath: ./build
+    envVars:
+      - fromGroup: skip-auto-install
+    headers:
+      - path: /_app/immutable/*
+        name: Cache-Control
+        value: max-age=2147483648, immutable
+
+envVarGroups:
+  - name: skip-auto-install
     envVars:
       - key: SKIP_INSTALL_DEPS
         value: true
