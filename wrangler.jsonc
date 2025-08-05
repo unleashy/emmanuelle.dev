@@ -4,8 +4,5 @@
   "assets": {
     "directory": "./build/",
     "html_handling": "drop-trailing-slash"
-  },
-  "build": {
-    "command": "yarn build"
   }
 }
