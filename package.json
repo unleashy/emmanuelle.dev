@@ -20,6 +20,7 @@
     "@types/node": "25.3.5",
     "@unleashy/eslint": "unleashy/eslint#dd345d2e86dfce5dad9b97e13789af6723b1f76d",
     "eslint": "10.0.2",
+    "lightningcss": "1.31.1",
     "prettier": "3.8.1",
     "prettier-plugin-svelte": "sveltejs/prettier-plugin-svelte#ede1f76a0eed52929da32cc0da1b804e66b413e3",
     "svelte": "5.53.7",

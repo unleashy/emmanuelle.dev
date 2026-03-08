@@ -5,7 +5,10 @@ export default defineConfig({
   plugins: [sveltekit()],
   server: {
     fs: {
-      allow: [".yarn"]
-    }
-  }
+      allow: [".yarn"],
+    },
+  },
+  css: {
+    transformer: "lightningcss",
+  },
 });
