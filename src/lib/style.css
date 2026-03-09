@@ -2,14 +2,12 @@
 
 :root {
   /* Type scale */
-  /* @link https://utopia.fyi/type/calculator?c=360,17,1.2,1240,18,1.25,4,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --t--2: clamp(0.7378rem, 0.6797rem + 0.2585vw, 0.88rem);
-  --t--1: clamp(0.8854rem, 0.7976rem + 0.3902vw, 1.1rem);
-  --t-0: clamp(1rem, 0.9347rem + 0.5682vw, 1.375rem);
-  --t-1: clamp(1.275rem, 1.0935rem + 0.8068vw, 1.7188rem);
-  --t-2: clamp(1.53rem, 1.277rem + 1.1244vw, 2.1484rem);
-  --t-3: clamp(1.836rem, 1.4885rem + 1.5446vw, 2.6855rem);
-  --t-4: clamp(2.2032rem, 1.7312rem + 2.0977vw, 3.3569rem);
+  /* @link https://utopia.fyi/type/calculator?c=360,15,1.2,1240,18,1.25,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --t--2: clamp(0.651rem, 0.6228rem + 0.1254vw, 0.72rem);
+  --t--1: clamp(0.7813rem, 0.7327rem + 0.2159vw, 0.9rem);
+  --t-0: clamp(0.9375rem, 0.8608rem + 0.3409vw, 1.125rem);
+  --t-1: clamp(1.125rem, 1.0099rem + 0.5114vw, 1.4063rem);
+  --t-2: clamp(1.35rem, 1.1832rem + 0.7415vw, 1.7578rem);
 
   --font-serif: "Lingua Franca", "Sitka Text";
   --font-serif-tracking--1: 0.025ch;
