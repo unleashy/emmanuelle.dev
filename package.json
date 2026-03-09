@@ -16,6 +16,9 @@
   "dependencies": {
     "@sveltejs/adapter-node": "5.5.4",
     "@sveltejs/kit": "2.53.4",
+    "svelte": "5.53.7"
+  },
+  "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "6.2.4",
     "@types/node": "25.3.5",
     "@unleashy/eslint": "unleashy/eslint#dd345d2e86dfce5dad9b97e13789af6723b1f76d",
@@ -23,7 +26,6 @@
     "lightningcss": "1.31.1",
     "prettier": "3.8.1",
     "prettier-plugin-svelte": "sveltejs/prettier-plugin-svelte#ede1f76a0eed52929da32cc0da1b804e66b413e3",
-    "svelte": "5.53.7",
     "svelte-check": "4.4.4",
     "typescript": "5.9.3",
     "typescript-eslint": "8.56.1",
