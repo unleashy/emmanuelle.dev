@@ -1,4 +1,5 @@
-@import "./fonts/fonts.css";
+@import "./fonts.css";
+@import "./colours.css";
 
 :root {
   /* Type scale */
@@ -9,7 +10,24 @@
   --t-1: clamp(1.125rem, 1.0099rem + 0.5114vw, 1.4063rem);
   --t-2: clamp(1.35rem, 1.1832rem + 0.7415vw, 1.7578rem);
 
-  --font-serif: "Lingua Franca", "Sitka Text";
+  /* Colours (l means light theme, d means dark theme) */
+  /* Colours: semantic aliases */
+  --c-accent1: light-dark(var(--c-l-pink-9), var(--c-d-pink-9));
+
+  --c-app-bg: light-dark(var(--c-l-grey-1), var(--c-d-grey-1));
+  --c-app-fg: light-dark(var(--c-l-grey-12), var(--c-d-grey-12));
+
+  --c-link-fg: light-dark(var(--c-l-pink-9), var(--c-d-pink-11));
+  --c-link-fg-hover: light-dark(var(--c-l-pink-12), var(--c-d-pink-12));
+  --c-link-border: light-dark(var(--c-l-pink-a6), var(--c-d-pink-7));
+  --c-link-border-hover: light-dark(var(--c-l-pink-a9), var(--c-d-pink-a9));
+
+  --c-separator: light-dark(var(--c-l-grey-4), var(--c-d-grey-4));
+
+  --g-funky: linear-gradient(120deg, var(--c-l-pink-8), var(--c-l-pink-6));
+
+  /* Fonts */
+  --font-serif: "Vollkorn Variable", "Sitka Text";
   --font-serif-tracking--1: 0.025ch;
   --font-serif-tracking-0: -0.025ch;
   --font-serif-tracking-1: -0.035ch;
@@ -19,6 +37,8 @@
   --measure: 60ch;
 
   --app-padding: 0.8rem;
+
+  color-scheme: light dark;
 }
 
 * {
@@ -41,11 +61,17 @@ emma-flow {
   max-width: none;
 }
 
+html {
+  color: var(--c-app-fg);
+  background-color: var(--c-app-bg);
+}
+
 body {
   min-height: 100vh;
 
   font-family: var(--font-serif), serif;
   font-size: var(--t-0);
+  font-variant-numeric: lining-nums;
   font-synthesis: none;
 
   line-height: var(--font-serif-leading-0);
@@ -70,7 +96,6 @@ input,
 label {
   font-size: inherit;
   font-weight: inherit;
-  line-height: 1.1;
   text-wrap: balance;
 }
 
@@ -86,6 +111,19 @@ select {
   scroll-margin-block: 5ex;
 }
 
+a {
+  color: var(--c-link-fg);
+  text-decoration-line: underline;
+  text-decoration-color: var(--c-link-border);
+  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.1em;
+
+  &:hover,
+  &:focus {
+    color: var(--c-link-fg-hover);
+  }
+}
+
 h1 {
   font-size: var(--t-2);
   letter-spacing: var(--font-serif-tracking-2);
@@ -96,9 +134,41 @@ h2 {
   letter-spacing: var(--font-serif-tracking-1);
 }
 
+ul,
+ol {
+  list-style-position: inside;
+}
+
+hr {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  border-width: 1px 0 0 0;
+  border-color: var(--c-separator);
+  border-style: solid;
+
+  overflow: visible;
+
+  &::after {
+    content: "\10AF1";
+
+    display: block;
+    position: absolute;
+
+    width: 2rem;
+    top: -0.75em;
+
+    text-align: center;
+    background: var(--c-app-bg);
+  }
+}
+
 @property --flow-gap {
-  syntax: "*";
+  syntax: "<length-percentage>";
   inherits: false;
+  initial-value: 16px;
 }
 
 emma-flow,
@@ -111,11 +181,7 @@ emma-flow,
    * Instead of using gap, I'm using sibling selectors so that individual
    * elements can modify their spacing within the flow.
    */
-  & > * {
-    margin-block: 0;
-  }
-
   & > * + * {
-    margin-block-start: var(--flow-gap, var(--t--1));
+    margin-block-start: var(--flow-gap);
   }
 }

@@ -284,6 +284,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/vollkorn@npm:^5.2.10":
+  version: 5.2.10
+  resolution: "@fontsource-variable/vollkorn@npm:5.2.10"
+  checksum: 10c0/999cbf4663cf83f63e8938f969f413eddc43f95cd2ccf72edba765347fc137398ec2eabc057541e2d8ec40e22fb0d72d738aa6c8194f38672b680a77b38c17bb
+  languageName: node
+  linkType: hard
+
 "@gar/promise-retry@npm:^1.0.0":
   version: 1.0.2
   resolution: "@gar/promise-retry@npm:1.0.2"
@@ -1225,13 +1232,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "emmablog@workspace:."
   dependencies:
+    "@fontsource-variable/vollkorn": "npm:^5.2.10"
     "@sveltejs/adapter-node": "npm:5.5.4"
     "@sveltejs/kit": "npm:2.53.4"
     "@sveltejs/vite-plugin-svelte": "npm:6.2.4"
     "@types/node": "npm:25.3.5"
     "@unleashy/eslint": "unleashy/eslint#dd345d2e86dfce5dad9b97e13789af6723b1f76d"
     eslint: "npm:10.0.2"
-    lightningcss: "npm:^1.31.1"
+    lightningcss: "npm:1.31.1"
     prettier: "npm:3.8.1"
     prettier-plugin-svelte: "sveltejs/prettier-plugin-svelte#ede1f76a0eed52929da32cc0da1b804e66b413e3"
     svelte: "npm:5.53.7"
@@ -2061,7 +2069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lightningcss@npm:^1.31.1":
+"lightningcss@npm:1.31.1":
   version: 1.31.1
   resolution: "lightningcss@npm:1.31.1"
   dependencies:

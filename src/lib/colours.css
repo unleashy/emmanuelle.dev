@@ -1,0 +1,132 @@
+/**
+ * Generated with Radix Colours (https://www.radix-ui.com/colors/custom)
+ * Accent: #ff9fb7
+ * Grey: #8e8c99 (light), #6f6d78 (dark)
+ * Background: #fdfcfd (light), #121113 (dark)
+ */
+
+:root {
+  --c-l-pink-1: #fdf9fa;
+  --c-l-pink-2: #fef3f5;
+  --c-l-pink-3: #ffe5ea;
+  --c-l-pink-4: #ffd3df;
+  --c-l-pink-5: #ffc3d3;
+  --c-l-pink-6: #ffb2c5;
+  --c-l-pink-7: #fc9cb4;
+  --c-l-pink-8: #f47e9e;
+  --c-l-pink-9: #d54c78;
+  --c-l-pink-10: #c63e6c;
+  --c-l-pink-11: #bb3363;
+  --c-l-pink-12: #6f002f;
+
+  --c-l-pink-a1: #fd3d3e04;
+  --c-l-pink-a2: #ffebee80;
+  --c-l-pink-a3: #ffe5ea;
+  --c-l-pink-a4: #ffd3df;
+  --c-l-pink-a5: #ffc3d3;
+  --c-l-pink-a6: #ffb2c5;
+  --c-l-pink-a7: #fb033f62;
+  --c-l-pink-a8: #ec004080;
+  --c-l-pink-a9: #c50240b3;
+  --c-l-pink-a10: #b4013dc1;
+  --c-l-pink-a11: #aa013ccc;
+  --c-l-pink-a12: #6f002f;
+
+  --c-l-pink-contrast: #fff;
+  --c-l-pink-surface: #fef1f3cc;
+  --c-l-pink-indicator: #d54c78;
+  --c-l-pink-track: #d54c78;
+
+  --c-l-grey-1: #f9f9fb;
+  --c-l-grey-2: #f6f6f8;
+  --c-l-grey-3: #edecf1;
+  --c-l-grey-4: #e5e4ea;
+  --c-l-grey-5: #dddce3;
+  --c-l-grey-6: #d6d4dd;
+  --c-l-grey-7: #cbc9d4;
+  --c-l-grey-8: #b8b6c3;
+  --c-l-grey-9: #8a8895;
+  --c-l-grey-10: #807e8a;
+  --c-l-grey-11: #61606a;
+  --c-l-grey-12: #201f26;
+
+  --c-l-grey-a1: #32639805;
+  --c-l-grey-a2: #1e3d5e08;
+  --c-l-grey-a3: #0e0c4a11;
+  --c-l-grey-a4: #09083c19;
+  --c-l-grey-a5: #06053521;
+  --c-l-grey-a6: #0b043629;
+  --c-l-grey-a7: #08023434;
+  --c-l-grey-a8: #05012c47;
+  --c-l-grey-a9: #05021d76;
+  --c-l-grey-a10: #04001880;
+  --c-l-grey-a11: #0200109e;
+  --c-l-grey-a12: #010008e0;
+
+  --c-l-grey-contrast: #ffffff;
+  --c-l-grey-surface: #ffffffcc;
+  --c-l-grey-indicator: #8a8895;
+  --c-l-grey-track: #8a8895;
+
+  --c-d-pink-1: #161011;
+  --c-d-pink-2: #1d1416;
+  --c-d-pink-3: #331a20;
+  --c-d-pink-4: #461c28;
+  --c-d-pink-5: #542432;
+  --c-d-pink-6: #64303e;
+  --c-d-pink-7: #7b4050;
+  --c-d-pink-8: #a15368;
+  --c-d-pink-9: #ff9fb7;
+  --c-d-pink-10: #f495ad;
+  --c-d-pink-11: #f899b1;
+  --c-d-pink-12: #f8d7de;
+
+  --c-d-pink-a1: #df000005;
+  --c-d-pink-a2: #fc51530c;
+  --c-d-pink-a3: #fc517024;
+  --c-d-pink-a4: #ff447338;
+  --c-d-pink-a5: #fc558148;
+  --c-d-pink-a6: #fd6a8f59;
+  --c-d-pink-a7: #ff7c9c71;
+  --c-d-pink-a8: #ff7e9f9a;
+  --c-d-pink-a9: #ff9fb7;
+  --c-d-pink-a10: #fe9bb4f4;
+  --c-d-pink-a11: #ff9db5f8;
+  --c-d-pink-a12: #ffdde3f8;
+
+  --c-d-pink-contrast: #32191f;
+  --c-d-pink-surface: #28171980;
+  --c-d-pink-indicator: #ff9fb7;
+  --c-d-pink-track: #ff9fb7;
+
+  --c-d-grey-1: #121113;
+  --c-d-grey-2: #19191b;
+  --c-d-grey-3: #232225;
+  --c-d-grey-4: #2a292d;
+  --c-d-grey-5: #313036;
+  --c-d-grey-6: #3b3a3f;
+  --c-d-grey-7: #48474e;
+  --c-d-grey-8: #615f69;
+  --c-d-grey-9: #6f6d78;
+  --c-d-grey-10: #7c7a85;
+  --c-d-grey-11: #b4b3bd;
+  --c-d-grey-12: #eeeef0;
+
+  --c-d-grey-a1: #00000000;
+  --c-d-grey-a2: #d9f4f609;
+  --c-d-grey-a3: #ebeaf814;
+  --c-d-grey-a4: #e6e5f81d;
+  --c-d-grey-a5: #e3e2fe26;
+  --c-d-grey-a6: #ecebfd30;
+  --c-d-grey-a7: #eae9ff40;
+  --c-d-grey-a8: #ebe7ff5d;
+  --c-d-grey-a9: #eae6fd6e;
+  --c-d-grey-a10: #ece9fd7c;
+  --c-d-grey-a11: #f3f1ffb8;
+  --c-d-grey-a12: #fdfdffef;
+
+  --c-d-grey-contrast: #ffffff;
+  --c-d-grey-surface: rgba(0, 0, 0, 0.05);
+  --c-d-grey-indicator: #6f6d78;
+  --c-d-grey-track: #6f6d78;
+}

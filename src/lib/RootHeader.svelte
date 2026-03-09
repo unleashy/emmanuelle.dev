@@ -41,12 +41,12 @@
     display: flex;
     gap: 1ch;
 
-    color: inherit;
+    background: transparent;
+    color: var(--c-app-fg);
     text-decoration: none;
 
-    &:hover,
-    &:focus {
-      color: deeppink;
+    &:hover, &:focus {
+      color: var(--c-accent1);
     }
 
     &::before {
@@ -61,7 +61,7 @@
     height: 1em;
     aspect-ratio: 1;
 
-    background: linear-gradient(120deg, hotpink, pink);
+    background: var(--g-funky);
     border-radius: 0.125em;
   }
 
