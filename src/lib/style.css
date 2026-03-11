@@ -52,7 +52,6 @@
 html,
 body,
 div,
-header,
 nav,
 main,
 footer,
@@ -165,6 +164,10 @@ hr {
   }
 }
 
+emma-container {
+  container-type: inline-size;
+}
+
 @property --flow-gap {
   syntax: "<length-percentage>";
   inherits: false;
@@ -184,4 +187,9 @@ emma-flow,
   & > * + * {
     margin-block-start: var(--flow-gap);
   }
+}
+
+.text-slight {
+  font-style: italic;
+  color: light-dark(var(--c-l-grey-11), var(--c-d-grey-11));
 }

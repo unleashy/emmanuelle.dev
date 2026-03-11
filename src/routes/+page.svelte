@@ -1,6 +1,9 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
   import Seo from "$lib/Seo.svelte";
+  import type { PageProps } from "./$types";
+
+  let { data }: PageProps = $props();
 </script>
 
 <Seo />
@@ -13,27 +16,17 @@
 <hr />
 
 <ol role="list" reversed class="article-list flow">
-  <li>
-    <h2>
-      <a href="#" class="article-link">So cool!</a>
-    </h2>
-    <time datetime="2026-03-01">1 March 2026</time>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae blanditiis
-      consequuntur doloribus est, fugiat nihil nostrum odio quaerat quis quod sint voluptates
-      voluptatum. Animi at corporis cupiditate eos explicabo.
-    </p>
-  </li>
-
-  <li>
-    <h2>
-      <a href="#" class="article-link"
-        >Hello world this is a test of a very long post title i gotta test this sorry</a
+  {#each data.posts as post (post.slug)}
+    <li>
+      <h2>
+        <a href={resolve(`/posts/${post.slug}`)} class="article-link">{post.title}</a>
+      </h2>
+      <time datetime={post.date.toJSON()} class="text-slight"
+        >{post.date.toLocaleString("en-GB", { dateStyle: "long" })}</time
       >
-    </h2>
-    <time datetime="2026-02-01">1 February 2026</time>
-    <p>bla bla bla</p>
-  </li>
+      <p>{post.summary}</p>
+    </li>
+  {/each}
 </ol>
 
 <style>
@@ -65,9 +58,6 @@
 
       & > time {
         justify-self: flex-end;
-
-        font-style: italic;
-        color: light-dark(var(--c-l-grey-11), var(--c-d-grey-11));
       }
 
       & > p {

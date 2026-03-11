@@ -284,7 +284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource-variable/vollkorn@npm:^5.2.10":
+"@fontsource-variable/vollkorn@npm:5.2.10":
   version: 5.2.10
   resolution: "@fontsource-variable/vollkorn@npm:5.2.10"
   checksum: 10c0/999cbf4663cf83f63e8938f969f413eddc43f95cd2ccf72edba765347fc137398ec2eabc057541e2d8ec40e22fb0d72d738aa6c8194f38672b680a77b38c17bb
@@ -1232,7 +1232,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "emmablog@workspace:."
   dependencies:
-    "@fontsource-variable/vollkorn": "npm:^5.2.10"
+    "@fontsource-variable/vollkorn": "npm:5.2.10"
     "@sveltejs/adapter-node": "npm:5.5.4"
     "@sveltejs/kit": "npm:2.53.4"
     "@sveltejs/vite-plugin-svelte": "npm:6.2.4"
@@ -1244,6 +1244,8 @@ __metadata:
     prettier-plugin-svelte: "sveltejs/prettier-plugin-svelte#ede1f76a0eed52929da32cc0da1b804e66b413e3"
     svelte: "npm:5.53.7"
     svelte-check: "npm:4.4.4"
+    temporal-polyfill-lite: "npm:0.3.1"
+    tinyexec: "npm:^1.0.2"
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.56.1"
     vite: "npm:7.3.1"
@@ -2901,6 +2903,20 @@ __metadata:
     minizlib: "npm:^3.1.0"
     yallist: "npm:^5.0.0"
   checksum: 10c0/ed905e4b33886377df6e9206e5d1bd34458c21666e27943f946799416f86348c938590d573d6a69312cb29c583b122647a64ec92782f2b7e24e68d985dd72531
+  languageName: node
+  linkType: hard
+
+"temporal-polyfill-lite@npm:0.3.1":
+  version: 0.3.1
+  resolution: "temporal-polyfill-lite@npm:0.3.1"
+  checksum: 10c0/e794e6360780e8ad52e52998636bca9f189eb0430bb227ea4ae720109dd1dd9c2e0644ae4fb2d891365731a37a917223016f78171d2391a5ac00a0852ca5d843
+  languageName: node
+  linkType: hard
+
+"tinyexec@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "tinyexec@npm:1.0.2"
+  checksum: 10c0/1261a8e34c9b539a9aae3b7f0bb5372045ff28ee1eba035a2a059e532198fe1a182ec61ac60fa0b4a4129f0c4c4b1d2d57355b5cb9aa2d17ac9454ecace502ee
   languageName: node
   linkType: hard
 
