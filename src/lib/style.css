@@ -110,6 +110,11 @@ select {
   scroll-margin-block: 5ex;
 }
 
+::selection {
+  background-color: var(--c-accent1);
+  color: var(--c-app-bg);
+}
+
 a {
   color: var(--c-link-fg);
   text-decoration-line: underline;
