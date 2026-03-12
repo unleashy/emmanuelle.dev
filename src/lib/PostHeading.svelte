@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Temporal } from "temporal-polyfill-lite";
   import Seo from "$lib/Seo.svelte";
+  import PostDate from "$lib/PostDate.svelte";
 
   interface Props {
     title: string;
@@ -9,10 +10,6 @@
   }
 
   let { title, summary, date }: Props = $props();
-
-  let formattedDate = $derived(
-    Temporal.PlainDate.from(date).toLocaleString("en-GB", { dateStyle: "long" }),
-  );
 </script>
 
 <Seo {title} description={summary} />
@@ -20,7 +17,7 @@
 <emma-container>
   <emma-post-header>
     <h1>{title}</h1>
-    <time datetime={date} class="text-slight">{formattedDate}</time>
+    <PostDate date={Temporal.PlainDate.from(date)} />
   </emma-post-header>
 </emma-container>
 

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
   import Seo from "$lib/Seo.svelte";
+  import PostDate from "$lib/PostDate.svelte";
   import type { PageProps } from "./$types";
 
   let { data }: PageProps = $props();
@@ -9,9 +10,14 @@
 <Seo />
 
 <p>
-  Hi there, welcome to my cosy abode atop the interconnected web!<br />Please enjoy my little blog
-  posts below, or <a href={resolve("/about")}>read more about me.</a>
+  Hi there, welcome to my abode atop the interconnected web! Please enjoy my little blog posts
+  below. Or:
 </p>
+
+<ul role="list" class="fancy-list">
+  <li><a href={resolve("/about")}>Read more about me!</a></li>
+  <li><a href={resolve("/ask")}>Ask me something or draw me a cute picture!</a></li>
+</ul>
 
 <hr />
 
@@ -21,16 +27,15 @@
       <h2>
         <a href={resolve(`/posts/${post.slug}`)} class="article-link">{post.title}</a>
       </h2>
-      <time datetime={post.date.toJSON()} class="text-slight"
-        >{post.date.toLocaleString("en-GB", { dateStyle: "long" })}</time
-      >
+      <div class="time">
+        <PostDate date={post.date} />
+      </div>
       <p>{post.summary}</p>
     </li>
   {/each}
 </ol>
 
 <style>
-  hr,
   .article-list {
     --flow-gap: 2rem;
   }
@@ -38,6 +43,7 @@
   .article-list {
     container-type: inline-size;
     list-style: none;
+    padding-inline-start: 0;
 
     & > * {
       --flow-gap: 2.5rem;
@@ -56,7 +62,7 @@
         "title time"
         "desc  desc";
 
-      & > time {
+      & > .time {
         justify-self: flex-end;
       }
 

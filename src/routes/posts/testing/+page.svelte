@@ -5,7 +5,7 @@
 <PostHeading
   title="Hello world"
   summary="What happens when a bunny and a puppy meet?"
-  date="2026-03-11"
+  date="2026-03-10"
 />
 
 <p>foobar</p>

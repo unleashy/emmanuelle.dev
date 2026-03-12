@@ -24,7 +24,7 @@
     gap: calc(var(--app-padding) * 2.5);
 
     margin-inline: var(--app-padding);
-    margin-block-end: 50svh;
+    padding-block-end: 50svh;
   }
 
   header {

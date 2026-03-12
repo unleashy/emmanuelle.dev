@@ -22,12 +22,17 @@
   --c-link-border: light-dark(var(--c-l-pink-a6), var(--c-d-pink-7));
   --c-link-border-hover: light-dark(var(--c-l-pink-a9), var(--c-d-pink-a9));
 
+  --c-abbr-border: light-dark(var(--c-l-grey-a9), var(--c-d-grey-9));
+
   --c-separator: light-dark(var(--c-l-grey-4), var(--c-d-grey-4));
+  --c-slight-fg: light-dark(var(--c-l-grey-11), var(--c-d-grey-11));
 
   --g-funky: linear-gradient(120deg, var(--c-l-pink-8), var(--c-l-pink-6));
 
   /* Fonts */
-  --font-serif: "Vollkorn Variable", "Sitka Text";
+  --font-serif:
+    "Vollkorn Variable", "Sitka Text", serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif-tracking--1: 0.025ch;
   --font-serif-tracking-0: -0.025ch;
   --font-serif-tracking-1: -0.035ch;
@@ -68,7 +73,7 @@ html {
 body {
   min-height: 100vh;
 
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-serif);
   font-size: var(--t-0);
   font-variant-numeric: lining-nums;
   font-synthesis: none;
@@ -76,7 +81,6 @@ body {
   line-height: var(--font-serif-leading-0);
   letter-spacing: var(--font-serif-tracking-0);
 
-  text-align: justify;
   hyphens: auto;
   hanging-punctuation: first allow-end last;
 
@@ -119,13 +123,25 @@ a {
   color: var(--c-link-fg);
   text-decoration-line: underline;
   text-decoration-color: var(--c-link-border);
-  text-decoration-thickness: 0.0625em;
-  text-underline-offset: 0.1em;
 
   &:hover,
   &:focus {
     color: var(--c-link-fg-hover);
   }
+}
+
+a,
+abbr {
+  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.1em;
+}
+
+abbr {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--c-abbr-border);
+
+  cursor: help;
 }
 
 h1 {
@@ -138,9 +154,35 @@ h2 {
   letter-spacing: var(--font-serif-tracking-1);
 }
 
+b,
+strong {
+  font-weight: 550;
+}
+
 ul,
 ol {
-  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  padding-inline-start: 2rem;
+}
+
+li::marker {
+  content: "•  ";
+}
+
+.fancy-list > ::marker {
+  content: "🙘  ";
+}
+
+summary {
+  font-weight: 550;
+  cursor: zoom-in;
+}
+
+details[open] summary {
+  cursor: zoom-out;
 }
 
 hr {
@@ -167,6 +209,11 @@ hr {
     text-align: center;
     background: var(--c-app-bg);
   }
+}
+
+hr,
+hr + * {
+  --flow-gap: 2rem;
 }
 
 emma-container {
@@ -196,5 +243,5 @@ emma-flow,
 
 .text-slight {
   font-style: italic;
-  color: light-dark(var(--c-l-grey-11), var(--c-d-grey-11));
+  color: var(--c-slight-fg);
 }
