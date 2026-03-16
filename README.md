@@ -1,4 +1,4 @@
-# emmablog
+# emmanuelle.dev
 
 it’s my blog don’t look
 
