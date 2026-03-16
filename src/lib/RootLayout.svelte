@@ -23,8 +23,12 @@
     display: grid;
     gap: calc(var(--app-padding) * 2.5);
 
-    margin-inline: var(--app-padding);
+    max-width: 1920px;
+    margin-inline: auto;
+
+    padding-inline: var(--app-padding);
     padding-block-end: 50svh;
+
   }
 
   header {

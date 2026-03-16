@@ -11,13 +11,8 @@
 
 <p>
   Hi there, welcome to my abode atop the interconnected web! Please enjoy my little blog posts
-  below. Or:
+  below, or <a href={resolve("/about")}>read more about me</a> if you want.
 </p>
-
-<ul role="list" class="fancy-list">
-  <li><a href={resolve("/about")}>Read more about me!</a></li>
-  <li><a href={resolve("/ask")}>Ask me something or draw me a cute picture!</a></li>
-</ul>
 
 <hr />
 

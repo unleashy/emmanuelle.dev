@@ -13,17 +13,21 @@
   /* Colours (l means light theme, d means dark theme) */
   /* Colours: semantic aliases */
   --c-accent1: light-dark(var(--c-l-pink-9), var(--c-d-pink-9));
+  --c-accent1-fg: light-dark(var(--c-l-grey-1), var(--c-d-grey-1));
+  --c-accent1-hover: light-dark(var(--c-l-pink-10), var(--c-d-pink-10));
 
   --c-app-bg: light-dark(var(--c-l-grey-1), var(--c-d-grey-1));
   --c-app-fg: light-dark(var(--c-l-grey-12), var(--c-d-grey-12));
 
   --c-link-fg: light-dark(var(--c-l-pink-9), var(--c-d-pink-11));
   --c-link-fg-hover: light-dark(var(--c-l-pink-12), var(--c-d-pink-12));
+  --c-link-fg-active: light-dark(var(--c-l-pink-1), var(--c-d-pink-1));
   --c-link-border: light-dark(var(--c-l-pink-a6), var(--c-d-pink-7));
   --c-link-border-hover: light-dark(var(--c-l-pink-a9), var(--c-d-pink-a9));
 
   --c-abbr-border: light-dark(var(--c-l-grey-a9), var(--c-d-grey-9));
 
+  --c-surface: light-dark(var(--c-l-grey-surface), var(--c-d-grey-a2));
   --c-separator: light-dark(var(--c-l-grey-4), var(--c-d-grey-4));
   --c-slight-fg: light-dark(var(--c-l-grey-11), var(--c-d-grey-11));
 
@@ -128,6 +132,12 @@ a {
   &:focus {
     color: var(--c-link-fg-hover);
   }
+
+  &:active {
+    background: var(--c-link-fg);
+    color: var(--c-link-fg-active);
+    text-decoration: none;
+  }
 }
 
 a,
@@ -214,6 +224,17 @@ hr {
 hr,
 hr + * {
   --flow-gap: 2rem;
+}
+
+img,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
 }
 
 emma-container {

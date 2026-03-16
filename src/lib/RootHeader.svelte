@@ -45,8 +45,13 @@
     color: var(--c-app-fg);
     text-decoration: none;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--c-accent1);
+    }
+
+    &:active {
+      background-color: inherit;
     }
 
     &::before {

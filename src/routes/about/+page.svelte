@@ -81,7 +81,7 @@
   </ul>
 </details>
 
-<details class="flow" open>
+<details class="flow">
   <summary>Metadata</summary>
 
   <ul>
@@ -93,6 +93,7 @@
         <emma-colour-chip></emma-colour-chip> <span>cosmic latte</span>
       </a>
     </li>
+    <li>My name is pronounced /e.ma.nuˈε.li/ in IPA.</li>
   </ul>
 </details>
 
@@ -108,9 +109,6 @@
   </li>
   <li>
     <a href="mailto:me@emmanuelle.dev">Email</a>
-  </li>
-  <li>
-    <a href={resolve("/ask")}>Literally sending me an ask through this very website</a>
   </li>
 </ul>
 
