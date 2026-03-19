@@ -11,8 +11,13 @@
 
 <p>
   Hi there, welcome to my abode atop the interconnected web! Please enjoy my little blog posts
-  below, or <a href={resolve("/about")}>read more about me</a> if you want.
+  below. Or:
 </p>
+
+<ul class="fancy-list">
+  <li><a href={resolve("/about")}>Read more about me</a></li>
+  <li><a href={resolve("/colophon")}>See how I made this website</a></li>
+</ul>
 
 <hr />
 
@@ -20,7 +25,9 @@
   {#each data.posts as post (post.slug)}
     <li>
       <h2>
-        <a href={resolve(`/posts/${post.slug}`)} class="article-link">{post.title}</a>
+        <a href={resolve(`/posts/${post.slug}`)} class="article-link">
+          <span>{post.title}</span>
+        </a>
       </h2>
       <div class="time">
         <PostDate date={post.date} />
@@ -80,6 +87,16 @@
     &:hover,
     &:focus {
       color: var(--c-link-fg);
+    }
+
+    &:active {
+      background: none;
+
+      & > * {
+        background: var(--c-link-fg);
+        color: var(--c-link-fg-active);
+        text-decoration: none;
+      }
     }
   }
 </style>

@@ -27,6 +27,9 @@
 
   --c-abbr-border: light-dark(var(--c-l-grey-a9), var(--c-d-grey-9));
 
+  --c-code-bg: light-dark(var(--c-l-grey-surface), var(--c-d-grey-3));
+  --c-code-border: light-dark(var(--c-l-grey-5), var(--c-d-grey-8));
+
   --c-surface: light-dark(var(--c-l-grey-surface), var(--c-d-grey-a2));
   --c-separator: light-dark(var(--c-l-grey-4), var(--c-d-grey-4));
   --c-slight-fg: light-dark(var(--c-l-grey-11), var(--c-d-grey-11));
@@ -42,6 +45,8 @@
   --font-serif-tracking-1: -0.035ch;
   --font-serif-tracking-2: -0.05ch;
   --font-serif-leading-0: 1.45;
+
+  --font-mono: "Spline Sans Mono Variable", monospace;
 
   --measure: 60ch;
 
@@ -138,6 +143,18 @@ a {
     color: var(--c-link-fg-active);
     text-decoration: none;
   }
+
+  &[href^="http"]::after {
+    content: "⮥";
+    font-size: var(--t--2);
+    vertical-align: bottom;
+    padding-inline-start: 0.25ch;
+  }
+
+  &[href^="https://en.wikipedia.org/"]::after {
+    content: "w";
+    font-style: italic;
+  }
 }
 
 a,
@@ -152,6 +169,22 @@ abbr {
   text-decoration-color: var(--c-abbr-border);
 
   cursor: help;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--t--1);
+}
+
+code {
+  padding-block: 0.25ch;
+  padding-inline: 0.5ch;
+
+  background: var(--c-code-bg);
+
+  border: 1px solid var(--c-code-border);
+  border-radius: 0.25em;
 }
 
 h1 {
@@ -242,9 +275,8 @@ emma-container {
 }
 
 @property --flow-gap {
-  syntax: "<length-percentage>";
+  syntax: "*";
   inherits: false;
-  initial-value: 16px;
 }
 
 emma-flow,
@@ -258,7 +290,7 @@ emma-flow,
    * elements can modify their spacing within the flow.
    */
   & > * + * {
-    margin-block-start: var(--flow-gap);
+    margin-block-start: var(--flow-gap, 0.7em);
   }
 }
 

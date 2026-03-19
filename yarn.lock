@@ -284,6 +284,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/spline-sans-mono@npm:5.2.8":
+  version: 5.2.8
+  resolution: "@fontsource-variable/spline-sans-mono@npm:5.2.8"
+  checksum: 10c0/55bb818202e6409241b710e6bfb708f050ef9ea3bc5b71d85b961bbd74355adeff638c2927aa10ce13e5d11ee8579b0805a5977f965873683170c72fed2ffa0a
+  languageName: node
+  linkType: hard
+
 "@fontsource-variable/vollkorn@npm:5.2.10":
   version: 5.2.10
   resolution: "@fontsource-variable/vollkorn@npm:5.2.10"
@@ -1232,6 +1239,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "emmablog@workspace:."
   dependencies:
+    "@fontsource-variable/spline-sans-mono": "npm:5.2.8"
     "@fontsource-variable/vollkorn": "npm:5.2.10"
     "@sveltejs/adapter-node": "npm:5.5.4"
     "@sveltejs/kit": "npm:2.53.4"

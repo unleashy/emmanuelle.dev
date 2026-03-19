@@ -1,6 +1,5 @@
 <script lang="ts">
   import Seo from "$lib/Seo.svelte";
-  import { resolve } from "$app/paths";
 </script>
 
 <Seo title="About me" description="I’m Emma and this is my silly blog!" />
