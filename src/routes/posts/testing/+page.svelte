@@ -2,10 +2,6 @@
   import PostHeading from "$lib/PostHeading.svelte";
 </script>
 
-<PostHeading
-  title="Hello world"
-  summary="What happens when a bunny and a puppy meet?"
-  date="2026-03-10"
-/>
+<PostHeading title="Hello world" summary="testing" date="2026-03-10" />
 
-<p>foobar</p>
+<p>testing</p>
