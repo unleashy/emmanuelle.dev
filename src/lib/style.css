@@ -290,7 +290,19 @@ emma-flow,
    * elements can modify their spacing within the flow.
    */
   & > * + * {
-    margin-block-start: var(--flow-gap, 0.7em);
+    margin-block-start: var(--flow-gap, 1.25em);
+  }
+}
+
+.flow--prose {
+  --flow-gap: 1.25em;
+
+  & > h2 {
+    --flow-gap: 3em;
+  }
+
+  & > h3 {
+    --flow-gap: 2em;
   }
 }
 

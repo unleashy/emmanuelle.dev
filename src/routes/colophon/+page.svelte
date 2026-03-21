@@ -70,6 +70,6 @@
 
 <style>
   .wrapper > * {
-    --flow-gap: 1.5rem;
+    --flow-gap: 1.75rem;
   }
 </style>
