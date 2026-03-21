@@ -104,6 +104,9 @@
 
 <ul role="list" class="fancy-list">
   <li>
+    <a href="https://github.com/unleashy">Github</a>
+  </li>
+  <li>
     <a href="https://bsky.social/profile/bnuuy.bsky.social">Bluesky</a>
   </li>
   <li>
