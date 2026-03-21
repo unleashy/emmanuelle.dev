@@ -3,12 +3,12 @@
 
 :root {
   /* Type scale */
-  /* @link https://utopia.fyi/type/calculator?c=360,15,1.2,1240,18,1.25,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --t--2: clamp(0.651rem, 0.6228rem + 0.1254vw, 0.72rem);
-  --t--1: clamp(0.7813rem, 0.7327rem + 0.2159vw, 0.9rem);
-  --t-0: clamp(0.9375rem, 0.8608rem + 0.3409vw, 1.125rem);
-  --t-1: clamp(1.125rem, 1.0099rem + 0.5114vw, 1.4063rem);
-  --t-2: clamp(1.35rem, 1.1832rem + 0.7415vw, 1.7578rem);
+  /* @link https://utopia.fyi/type/calculator?c=360,18,1.2,1920,22,1.25,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --t--2: clamp(0.7813rem, 0.7585rem + 0.1013vw, 0.88rem);
+  --t--1: clamp(0.9375rem, 0.9rem + 0.1667vw, 1.1rem);
+  --t-0: clamp(1.125rem, 1.0673rem + 0.2564vw, 1.375rem);
+  --t-1: clamp(1.35rem, 1.2649rem + 0.3782vw, 1.7188rem);
+  --t-2: clamp(1.62rem, 1.4981rem + 0.542vw, 2.1484rem);
 
   /* Colours (l means light theme, d means dark theme) */
   /* Colours: semantic aliases */
@@ -45,8 +45,12 @@
   --font-serif-tracking-1: -0.035ch;
   --font-serif-tracking-2: -0.05ch;
   --font-serif-leading-0: 1.45;
+  --font-serif-weight-1: 600;
 
   --font-mono: "Spline Sans Mono Variable", monospace;
+  --font-mono-tracking--1: -0.025ch;
+  --font-mono-leading--1: 1.45;
+  --font-mono-weight-0: 450;
 
   --measure: 60ch;
 
@@ -183,6 +187,9 @@ code,
 pre {
   font-family: var(--font-mono);
   font-size: var(--t--1);
+  font-weight: var(--font-mono-weight-0);
+  letter-spacing: var(--font-mono-tracking--1);
+  line-height: var(--font-mono-leading--1);
 }
 
 code {
@@ -205,9 +212,15 @@ h2 {
   letter-spacing: var(--font-serif-tracking-1);
 }
 
+h3 {
+  font-size: var(--t-0);
+  letter-spacing: var(--font-serif-tracking-0);
+  font-weight: var(--font-serif-weight-1);
+}
+
 b,
 strong {
-  font-weight: 550;
+  font-weight: var(--font-serif-weight-1);
 }
 
 ul,
@@ -278,6 +291,10 @@ object {
   max-width: 100%;
 }
 
+emma-flow {
+  display: block;
+}
+
 emma-container {
   container-type: inline-size;
 }
@@ -289,10 +306,6 @@ emma-container {
 
 emma-flow,
 .flow {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
   /**
    * Instead of using gap, I'm using sibling selectors so that individual
    * elements can modify their spacing within the flow.
@@ -314,7 +327,21 @@ emma-flow,
   }
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .text-slight {
   font-style: italic;
   color: var(--c-slight-fg);
+}
+
+.max-width\:measure {
+  max-width: var(--measure);
+}
+
+.grid-column\:-1 {
+  grid-column: -1;
 }

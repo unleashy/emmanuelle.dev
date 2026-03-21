@@ -69,7 +69,7 @@
 </emma-flow>
 
 <style>
-  .wrapper > * {
-    --flow-gap: 1.75rem;
+  .wrapper > :global(*) {
+    --flow-gap: 1.75em;
   }
 </style>

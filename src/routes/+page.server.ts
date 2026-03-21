@@ -28,10 +28,15 @@ async function loadPosts(): Promise<Post[]> {
     let content = await fs.readFile(route, { encoding: "utf8" });
 
     let seo = content.match(
-      /<PostHeading\s*title="(.*?)"\s*summary="(.*?)"\s*date="(.*?)"\s*\/>/su,
+      /<Post\s*title="(.*?)"\s*summary="(.*?)"\s*date="(.*?)"(\s*draft)?\s*>/su,
     );
     if (!seo) {
-      throw new Error(`could not find PostHeading tag for '${dir.name}'`);
+      throw new Error(`could not find Post tag for '${dir.name}'`);
+    }
+
+    let draft = seo[4];
+    if (draft) {
+      continue;
     }
 
     let title = seo[1];

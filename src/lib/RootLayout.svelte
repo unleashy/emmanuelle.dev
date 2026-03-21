@@ -13,7 +13,7 @@
   <header>
     {@render header()}
   </header>
-  <main class="flow">
+  <main class="flex flow">
     {@render children()}
   </main>
 </emma-layout>
@@ -28,7 +28,6 @@
 
     padding-inline: var(--app-padding);
     padding-block-end: 50svh;
-
   }
 
   header {

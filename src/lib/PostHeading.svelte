@@ -7,9 +7,10 @@
     title: string;
     summary: string;
     date: string;
+    draft?: boolean;
   }
 
-  let { title, summary, date }: Props = $props();
+  let { title, summary, date, draft }: Props = $props();
 </script>
 
 <Seo {title} description={summary} />
@@ -17,7 +18,11 @@
 <emma-container>
   <emma-post-header>
     <h1>{title}</h1>
-    <PostDate date={Temporal.PlainDate.from(date)} />
+    {#if draft}
+      <strong class="draft-badge">Draft</strong>
+    {:else}
+      <PostDate date={Temporal.PlainDate.from(date)} />
+    {/if}
   </emma-post-header>
 </emma-container>
 
@@ -33,5 +38,21 @@
       align-items: baseline;
       flex-direction: row;
     }
+  }
+
+  .draft-badge {
+    display: inline-block;
+
+    padding: 1ex 1rem;
+    line-height: 1;
+
+    font-size: var(--t--1);
+    letter-spacing: var(--font-serif-tracking--1);
+    font-weight: var(--font-serif-weight-1);
+
+    background: oklch(60% 0.2 250);
+    color: white;
+
+    border-radius: 1rem;
   }
 </style>
