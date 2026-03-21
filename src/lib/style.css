@@ -144,15 +144,23 @@ a {
     text-decoration: none;
   }
 
-  &[href^="http"]::after {
-    content: "⮥";
+  &:is([href^="http"], [href^="mailto"])::after {
     font-size: var(--t--2);
     vertical-align: bottom;
     padding-inline-start: 0.25ch;
   }
 
+  &[href^="http"]::after {
+    content: "⮥";
+  }
+
   &[href^="https://en.wikipedia.org/"]::after {
     content: "w";
+    font-style: italic;
+  }
+
+  &[href^="mailto"]::after {
+    content: "@";
     font-style: italic;
   }
 }
