@@ -1,7 +1,8 @@
 <script lang="ts">
-  import type { HTMLAttributes } from "svelte/elements";
+  import { highlight } from "$lib/highlighting";
 
-  interface Props extends HTMLAttributes<HTMLPreElement> {
+  interface Props {
+    language: string;
     code: string;
   }
 
@@ -26,10 +27,10 @@
       .trim();
   }
 
-  let { code, ...rest }: Props = $props();
+  let { language, code }: Props = $props();
 </script>
 
-<pre {...rest}><code>{dedent(code)}</code></pre>
+<pre><code>{@html highlight(dedent(code), language)}</code></pre>
 
 <style>
   pre {
@@ -42,6 +43,17 @@
     padding-inline: 1rem;
     padding-block: 1rem;
     /* optically align vs line-height */
-    padding-block-end: 0.85rem;
+    padding-block-end: 0.8rem;
+  }
+
+  :global {
+    hl-keyword {
+      color: var(--c-accent1);
+      font-weight: var(--font-mono-weight-1);
+    }
+
+    hl-punctuation {
+      color: var(--c-slight-fg);
+    }
   }
 </style>

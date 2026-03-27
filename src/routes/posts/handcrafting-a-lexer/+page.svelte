@@ -54,6 +54,7 @@
     token, then continue doing this, in a loop, until the file is exhausted.
   </p>
   <CodeBlock
+    language="d"
     code={`
         while (!empty) {
             auto token = matchLongestToken(current);
