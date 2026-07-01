@@ -23,6 +23,7 @@ interface TokenRuleChoices {
 
 type TokenRule = TokenRulePattern | TokenRuleGrouping | TokenRuleChoices;
 
+// prettier-ignore
 type Category =
   | "error"
   | "name"
@@ -150,7 +151,7 @@ function toMatchers(rules: TokenRule[]): TokenRuleMatcher[] {
 const languages = Object.freeze({
   d: {
     matchers: toMatchers([
-      { pattern: /\/\/.*?(?:\r?\n|\u2028|\u2029)/su, category: "comment" },
+      { pattern: /\/\/.*?(?:\r?\n|\u{2028}|\u{2029})/su, category: "comment" },
       { open: "/*", close: "*/", category: "comment" },
       { open: "/+", close: "+/", nestable: true, category: "comment" },
 
@@ -178,7 +179,7 @@ const languages = Object.freeze({
       },
       { pattern: /[_A-Za-z]\w*/u, category: "name" },
 
-      { pattern: /[ \f\r\n\u2028\u2029]+/u, category: "whitespace" },
+      { pattern: /[ \f\r\n\u{2028}\u{2029}]+/u, category: "whitespace" },
     ]),
   },
 } satisfies Record<string, Language>);

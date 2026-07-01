@@ -16,24 +16,24 @@
   "dependencies": {
     "@fontsource-variable/spline-sans-mono": "5.2.8",
     "@fontsource-variable/vollkorn": "5.2.10",
-    "@sveltejs/adapter-node": "5.5.4",
-    "@sveltejs/kit": "2.53.4",
-    "svelte": "5.53.7",
-    "temporal-polyfill-lite": "0.3.1",
-    "tinyexec": "1.0.2"
+    "@sveltejs/adapter-static": "3.0.10",
+    "@sveltejs/kit": "2.69.0",
+    "svelte": "5.56.4",
+    "temporal-polyfill-lite": "0.4.2",
+    "tinyexec": "1.2.4"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "6.2.4",
-    "@types/node": "25.3.5",
-    "@unleashy/eslint": "unleashy/eslint#dd345d2e86dfce5dad9b97e13789af6723b1f76d",
-    "eslint": "10.0.2",
-    "lightningcss": "1.31.1",
-    "prettier": "3.8.1",
-    "prettier-plugin-svelte": "sveltejs/prettier-plugin-svelte#ede1f76a0eed52929da32cc0da1b804e66b413e3",
-    "svelte-check": "4.4.4",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.56.1",
-    "vite": "7.3.1"
+    "@sveltejs/vite-plugin-svelte": "7.1.2",
+    "@types/node": "25.9.4",
+    "@unleashy/eslint": "unleashy/eslint#cdf74b283b180cbffc759a28a7a1891de83b9ee3",
+    "eslint": "10.6.0",
+    "lightningcss": "1.32.0",
+    "prettier": "3.9.4",
+    "prettier-plugin-svelte": "^4.1.1",
+    "svelte-check": "4.7.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.62.1",
+    "vite": "8.1.2"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.17.0"
 }

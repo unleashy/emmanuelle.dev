@@ -5,6 +5,7 @@ export default [
   {
     rules: {
       "svelte/no-at-html-tags": "off",
+      "unicorn/prefer-https": "off",
     },
   },
 ];

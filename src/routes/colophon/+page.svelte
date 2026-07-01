@@ -47,20 +47,13 @@
   </p>
 
   <p>
-    <strong>Infra.</strong> The website is built by SvelteKit into a
-    <a href="https://nodejs.org">Node.js</a>
-    server. That server is then proxied by <a href="https://caddyserver.com">Caddy</a>, which
-    handles every static file itself such as pre-rendered routes and CSS. (Dynamic stuff goes to the
-    Node server; there isn’t any right now though). This little system is hosted on the FreeBSD
-    servers at
-    <a href="https://www.nearlyfreespeech.net/">NearlyFreeSpeech.net</a> which is a pretty good & cheap
-    host!
+    <strong>Infra.</strong> The website is built by SvelteKit into a static HTML/CSS/JS bundle,
+    which is served by <a href="https://render.com">Render</a>.
   </p>
 
   <p>
-    <strong>Deployments.</strong> When I need to update I just <code>git pull</code> and restart the
-    servers myself, whatever. The code is mirrored on
-    <a href="https://github.com/unleashy/emmanuelle.dev">GitHub</a>.
+    <strong>Deployments.</strong> The code is mirrored on
+    <a href="https://github.com/unleashy/emmanuelle.dev">GitHub</a> and deployed on commit automatically.
   </p>
 
   <p>
