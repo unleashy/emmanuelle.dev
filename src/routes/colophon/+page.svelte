@@ -57,7 +57,7 @@
   </p>
 
   <p>
-    <strong>AI.</strong> I used no AI in making this website.
+    <strong>AI.</strong> I used no AI when authoring this website, either for code or for writing.
   </p>
 </emma-flow>
 
