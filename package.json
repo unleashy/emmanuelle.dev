@@ -14,26 +14,27 @@
     "lint": "prettier --check . && eslint ."
   },
   "dependencies": {
-    "@fontsource-variable/spline-sans-mono": "5.2.8",
-    "@fontsource-variable/vollkorn": "5.2.10",
+    "@fontsource-variable/spline-sans-mono": "5.3.0",
+    "@fontsource-variable/vollkorn": "5.3.0",
     "@sveltejs/adapter-static": "3.0.10",
-    "@sveltejs/kit": "2.69.0",
-    "svelte": "5.56.4",
+    "@sveltejs/kit": "2.70.1",
+    "svelte": "5.56.7",
     "temporal-polyfill-lite": "0.4.2",
     "tinyexec": "1.2.4"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "7.1.2",
-    "@types/node": "25.9.4",
-    "@unleashy/eslint": "unleashy/eslint#cdf74b283b180cbffc759a28a7a1891de83b9ee3",
-    "eslint": "10.6.0",
-    "lightningcss": "1.32.0",
-    "prettier": "3.9.4",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "@sveltejs/vite-plugin-svelte": "7.2.0",
+    "@types/node": "25.9.5",
+    "@unleashy/eslint": "unleashy/eslint#de2bc98e8bff24ec21c9bc7715b1a30e066e0517",
+    "eslint": "10.7.0",
+    "lightningcss": "1.33.0",
+    "prettier": "3.9.6",
     "prettier-plugin-svelte": "^4.1.1",
-    "svelte-check": "4.7.1",
-    "typescript": "6.0.3",
-    "typescript-eslint": "8.62.1",
-    "vite": "8.1.2"
+    "svelte-check": "4.7.3",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "8.65.0",
+    "vite": "8.1.5"
   },
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "pnpm@11.16.0"
 }

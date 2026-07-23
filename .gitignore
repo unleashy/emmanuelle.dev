@@ -1,12 +1,6 @@
 # This is an allow list. Every file is ignored by default unless excluded.
 *
 
-!.yarn/
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
 !src/
 !src/**/*
 
@@ -25,5 +19,4 @@
 !svelte.config.js
 !tsconfig.json
 !vite.config.ts
-!yarn.lock
-!.yarnrc.yml
+!pnpm-lock.yaml
