@@ -280,6 +280,12 @@ hr {
     width: 2rem;
     top: -0.9em;
 
+    @supports (text-box-edge: ex alphabetic) {
+      top: -0.55ex;
+      text-box-trim: trim-both;
+      text-box-edge: ex alphabetic;
+    }
+
     text-align: center;
     background: var(--c-app-bg);
   }
