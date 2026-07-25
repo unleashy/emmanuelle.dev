@@ -10,7 +10,7 @@
 
 {#snippet link()}
   <a href={resolve("/")}>
-    <div class="box" role="presentation"></div>
+    <div class="flower" role="presentation"></div>
     <span class="name">emmablog</span>
   </a>
 {/snippet}
@@ -39,11 +39,12 @@
   a {
     position: relative;
     display: flex;
-    gap: 1ch;
+    gap: 0.75ch;
 
     background: transparent;
     color: var(--c-app-fg);
     text-decoration: none;
+    font-style: italic;
 
     &:hover,
     &:focus {
@@ -62,17 +63,23 @@
     }
   }
 
-  .box {
-    height: 1em;
+  .flower {
+    height: 1.25em;
     aspect-ratio: 1;
 
     background: var(--g-funky);
-    border-radius: 0.125em;
-  }
+    background-position: 10% 10%;
 
-  .name {
-    /* Improve optical alignment against .box */
-    position: relative;
-    top: -0.1em;
+    clip-path: shape(
+      from 77.72% 67.32%,
+      arc to 57.35% 81.85% of 13.16% large cw,
+      arc to 32.68% 77.72% of 13.16% large cw,
+      arc to 18.15% 57.35% of 13.16% large cw,
+      arc to 22.28% 32.68% of 13.16% large cw,
+      arc to 42.65% 18.15% of 13.16% large cw,
+      arc to 67.32% 22.28% of 13.16% large cw,
+      arc to 81.85% 42.65% of 13.16% large cw,
+      arc to 77.72% 67.32% of 13.16% large cw
+    );
   }
 </style>

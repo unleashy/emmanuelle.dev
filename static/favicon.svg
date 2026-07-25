@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="grad" gradientTransform="rotate(60)">
-      <stop offset="0%" stop-color="#f47e9e"/>
-      <stop offset="100%" stop-color="#ffb2c5"/>
+    <linearGradient id="a" x1="0" x2="1" y1=".5" y2=".5" gradientTransform="rotate(30 .5 .5)" gradientUnits="objectBoundingBox" spreadMethod="pad">
+      <stop offset="0" stop-color="#f47e9e"/>
+      <stop offset="1" stop-color="#ffb2c5"/>
     </linearGradient>
   </defs>
-  <rect width="256" height="256" rx="32" fill="url(#grad)" class="theming"/>
+  <path fill="url(#a)" d="M79.5 68.432a14 14 0 0 1 4.966 15.706 14.003 14.003 0 0 1-26.644-.244A14.004 14.004 0 1 1 31.568 79.5a14.005 14.005 0 1 1-15.462-21.678 14 14 0 0 1-14.629-7.589 14 14 0 0 1 2.721-16.254A14 14 0 0 1 20.5 31.568a14.006 14.006 0 1 1 21.678-15.462A14.005 14.005 0 1 1 68.432 20.5a14.004 14.004 0 1 1 15.462 21.678 14.004 14.004 0 0 1 11.908 23.843A14 14 0 0 1 79.5 68.432" paint-order="fill"/>
 </svg>
