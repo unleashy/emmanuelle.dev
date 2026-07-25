@@ -16,6 +16,7 @@
   "dependencies": {
     "@fontsource-variable/spline-sans-mono": "5.3.0",
     "@fontsource-variable/vollkorn": "5.3.0",
+    "@fontsource-variable/ysabeau": "^5.3.0",
     "@sveltejs/adapter-static": "3.0.10",
     "@sveltejs/kit": "2.70.1",
     "svelte": "5.56.7",
@@ -23,9 +24,9 @@
     "tinyexec": "1.2.4"
   },
   "devDependencies": {
-    "@typescript/native": "npm:typescript@^7.0.2",
     "@sveltejs/vite-plugin-svelte": "7.2.0",
     "@types/node": "25.9.5",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "@unleashy/eslint": "unleashy/eslint#de2bc98e8bff24ec21c9bc7715b1a30e066e0517",
     "eslint": "10.7.0",
     "lightningcss": "1.33.0",

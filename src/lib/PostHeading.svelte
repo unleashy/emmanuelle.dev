@@ -42,13 +42,14 @@
 
   .draft-badge {
     display: inline-block;
+    align-self: center;
 
     padding: 1ex 1rem;
     line-height: 1;
 
     font-size: var(--t--1);
-    letter-spacing: var(--font-serif-tracking--1);
-    font-weight: var(--font-serif-weight-1);
+    letter-spacing: var(--font-sans-tracking--1);
+    font-weight: var(--font-sans-weight-1);
 
     background: oklch(60% 0.2 250);
     color: white;

@@ -4,6 +4,10 @@
   import { page } from "$app/state";
   import type { LayoutProps } from "./$types";
 
+  import "@fontsource-variable/ysabeau/wght.css";
+  import "@fontsource-variable/ysabeau/wght-italic.css";
+  import "@fontsource-variable/spline-sans-mono/wght.css";
+  import "@fontsource-variable/spline-sans-mono/wght-italic.css";
   import "$lib/style.css";
 
   let { children }: LayoutProps = $props();

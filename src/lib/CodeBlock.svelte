@@ -40,10 +40,12 @@
   code {
     display: block;
     max-width: none;
-    padding-inline: 1rem;
-    padding-block: 1rem;
+    padding-inline: 1.25rem;
+    padding-block: 1.25rem;
     /* optically align vs line-height */
-    padding-block-end: 0.8rem;
+    padding-block-end: 1.1rem;
+
+    text-box: trim-both cap alphabetic;
   }
 
   :global {

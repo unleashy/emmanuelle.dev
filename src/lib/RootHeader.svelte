@@ -32,7 +32,7 @@
     font-size: var(--t-0);
     font-weight: inherit;
     line-height: 1;
-    letter-spacing: var(--font-serif-tracking-0);
+    letter-spacing: var(--font-sans-tracking-0);
     text-wrap: balance;
   }
 
@@ -73,6 +73,6 @@
   .name {
     /* Improve optical alignment against .box */
     position: relative;
-    top: 0.05em;
+    top: -0.1em;
   }
 </style>

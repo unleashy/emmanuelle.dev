@@ -37,20 +37,21 @@
   --g-funky: linear-gradient(120deg, var(--c-l-pink-8), var(--c-l-pink-6));
 
   /* Fonts */
-  --font-serif:
-    "Vollkorn Variable", "Sitka Text", serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif-tracking--1: 0.025ch;
-  --font-serif-tracking-0: -0.025ch;
-  --font-serif-tracking-1: -0.035ch;
-  --font-serif-tracking-2: -0.05ch;
-  --font-serif-leading-0: 1.45;
-  --font-serif-weight-1: 600;
+  --font-sans:
+    "Ysabeau Variable", "Libertinus Sans", "Linux Biolinum", system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans-tracking--1: 0.055ch;
+  --font-sans-tracking-0: -0.055ch;
+  --font-sans-tracking-1: -0.075ch;
+  --font-sans-tracking-2: -0.1ch;
+  --font-sans-leading-0: 1.5;
+  --font-sans-weight-0: 500;
+  --font-sans-weight-1: 650;
 
   --font-mono: "Spline Sans Mono Variable", monospace;
   --font-mono-tracking--1: -0.025ch;
-  --font-mono-leading--1: 1.45;
-  --font-mono-weight-0: 450;
+  --font-mono-leading--1: 1.65;
+  --font-mono-weight-0: 400;
   --font-mono-weight-1: 550;
 
   --measure: 60ch;
@@ -87,13 +88,14 @@ html {
 body {
   min-height: 100vh;
 
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--t-0);
+  font-weight: var(--font-sans-weight-0);
   font-variant-numeric: lining-nums;
   font-synthesis: none;
 
-  line-height: var(--font-serif-leading-0);
-  letter-spacing: var(--font-serif-tracking-0);
+  line-height: var(--font-sans-leading-0);
+  letter-spacing: var(--font-sans-tracking-0);
 
   hyphens: auto;
   hanging-punctuation: first allow-end last;
@@ -203,25 +205,31 @@ code {
   border-radius: 0.25em;
 }
 
+h1,
+h2,
+h3 {
+  text-box: trim-end cap text;
+}
+
 h1 {
   font-size: var(--t-2);
-  letter-spacing: var(--font-serif-tracking-2);
+  letter-spacing: var(--font-sans-tracking-2);
 }
 
 h2 {
   font-size: var(--t-1);
-  letter-spacing: var(--font-serif-tracking-1);
+  letter-spacing: var(--font-sans-tracking-1);
 }
 
 h3 {
   font-size: var(--t-0);
-  letter-spacing: var(--font-serif-tracking-0);
-  font-weight: var(--font-serif-weight-1);
+  letter-spacing: var(--font-sans-tracking-0);
+  font-weight: var(--font-sans-weight-1);
 }
 
 b,
 strong {
-  font-weight: var(--font-serif-weight-1);
+  font-weight: var(--font-sans-weight-1);
 }
 
 ul,
@@ -270,7 +278,7 @@ hr {
     position: absolute;
 
     width: 2rem;
-    top: -0.835em;
+    top: -0.9em;
 
     text-align: center;
     background: var(--c-app-bg);

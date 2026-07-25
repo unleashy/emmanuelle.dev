@@ -18,9 +18,7 @@
   <emma-flow>
     <p>
       <strong>Typography.</strong> The body text uses
-      <a href="http://vollkorn-typeface.com/">Vollkorn</a>, a very nice serif. Initially I was going
-      to use <a href="https://fontlibrary.org/en/font/lingua-franca">Lingua Franca</a>, but Vollkorn
-      read a little better, I thought.
+      <a href="https://github.com/CatharsisFonts/Ysabeau">Ysabeau</a>.
     </p>
 
     <p>
