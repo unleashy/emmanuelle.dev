@@ -12,7 +12,7 @@ importers:
         specifier: 5.3.0
         version: 5.3.0
       '@fontsource-variable/ysabeau':
-        specifier: ^5.3.0
+        specifier: 5.3.0
         version: 5.3.0
       '@sveltejs/adapter-static':
         specifier: 3.0.10
@@ -37,7 +37,7 @@ importers:
         specifier: 25.9.5
         version: 25.9.5
       '@typescript/native':
-        specifier: npm:typescript@^7.0.2
+        specifier: npm:typescript@7.0.2
         version: typescript@7.0.2
       '@unleashy/eslint':
         specifier: unleashy/eslint#de2bc98e8bff24ec21c9bc7715b1a30e066e0517
@@ -52,13 +52,13 @@ importers:
         specifier: 3.9.6
         version: 3.9.6
       prettier-plugin-svelte:
-        specifier: ^4.1.1
+        specifier: 4.1.1
         version: 4.1.1(prettier@3.9.6)(svelte@5.56.7(@typescript-eslint/types@8.65.0))
       svelte-check:
         specifier: 4.7.3
         version: 4.7.3(@typescript/typescript6@6.0.2)(picomatch@4.0.5)(svelte@5.56.7(@typescript-eslint/types@8.65.0))
       typescript:
-        specifier: npm:@typescript/typescript6@^6.0.2
+        specifier: npm:@typescript/typescript6@6.0.2
         version: '@typescript/typescript6@6.0.2'
       typescript-eslint:
         specifier: 8.65.0
