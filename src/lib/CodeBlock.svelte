@@ -57,5 +57,9 @@
     hl-punctuation {
       color: var(--c-slight-fg);
     }
+
+    hl-comment {
+      color: var(--c-slight-fg);
+    }
   }
 </style>
