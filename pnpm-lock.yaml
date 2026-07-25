@@ -11,9 +11,6 @@ importers:
       '@fontsource-variable/spline-sans-mono':
         specifier: 5.3.0
         version: 5.3.0
-      '@fontsource-variable/vollkorn':
-        specifier: 5.3.0
-        version: 5.3.0
       '@fontsource-variable/ysabeau':
         specifier: ^5.3.0
         version: 5.3.0
@@ -126,9 +123,6 @@ packages:
 
   '@fontsource-variable/spline-sans-mono@5.3.0':
     resolution: {integrity: sha512-dH/qBj/MCE4ObiuCwlA9X1o3AftMO9dwfFgoRVYjy6VCPYkpWAlEtK/RjeyICgsR8rW763IAQARskVgShBY5JA==}
-
-  '@fontsource-variable/vollkorn@5.3.0':
-    resolution: {integrity: sha512-EYzMw2FGZXrR6oB7A3/pck3HY2ZjIGfoTFIZV5OsXexLu0nqPELuCmOoS7oQiQ6TkNjlQ3UgUIU24tNvxEKzcw==}
 
   '@fontsource-variable/ysabeau@5.3.0':
     resolution: {integrity: sha512-agH/nrEGS3nUafklAppr+m4f3QGDStAwfAco03iWWGcWk4UK0Wddlc2k9/U4A8vVQTKCigWCxUzeudsKlmvAVg==}
@@ -1394,8 +1388,6 @@ snapshots:
       levn: 0.4.1
 
   '@fontsource-variable/spline-sans-mono@5.3.0': {}
-
-  '@fontsource-variable/vollkorn@5.3.0': {}
 
   '@fontsource-variable/ysabeau@5.3.0': {}
 
