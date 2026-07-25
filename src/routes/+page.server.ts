@@ -13,14 +13,14 @@ interface Post {
   summary: string;
 }
 
-export const load: PageServerLoad = async () => ({ posts: await loadPosts() });
-
 const POSTS_PATH = path.join(process.cwd(), "src", "routes", "posts");
 
-async function loadPosts(): Promise<Post[]> {
+export const load: PageServerLoad = async () => ({ posts: await loadPosts(POSTS_PATH) });
+
+async function loadPosts(postsDirPath: string): Promise<Post[]> {
   let posts = [];
 
-  let postsDir = await fs.opendir(POSTS_PATH, { recursive: false });
+  let postsDir = await opendir(postsDirPath);
   for await (let dir of postsDir) {
     if (!dir.isDirectory()) continue;
 
@@ -52,4 +52,12 @@ async function loadPosts(): Promise<Post[]> {
   }
 
   return posts;
+}
+
+async function opendir(path: string) {
+  try {
+    return await fs.opendir(path, { recursive: false });
+  } catch {
+    return [];
+  }
 }
