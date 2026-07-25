@@ -68,7 +68,6 @@
     aspect-ratio: 1;
 
     background: var(--g-funky);
-    background-position: 10% 10%;
 
     clip-path: shape(
       from 77.72% 67.32%,
