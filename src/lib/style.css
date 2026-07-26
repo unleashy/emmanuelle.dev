@@ -50,7 +50,8 @@
 
   --font-mono: "Spline Sans Mono Variable", monospace;
   --font-mono-tracking--1: -0.025ch;
-  --font-mono-leading--1: 1.65;
+  --font-mono-leading-0: 1.4;
+  --font-mono-leading-1: 1.65;
   --font-mono-weight-0: 400;
   --font-mono-weight-1: 550;
 
@@ -192,7 +193,7 @@ pre {
   font-size: var(--t--1);
   font-weight: var(--font-mono-weight-0);
   letter-spacing: var(--font-mono-tracking--1);
-  line-height: var(--font-mono-leading--1);
+  line-height: var(--font-mono-leading-1);
 }
 
 code {

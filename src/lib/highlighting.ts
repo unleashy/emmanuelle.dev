@@ -39,6 +39,10 @@ interface Token {
   value: string;
 }
 
+interface TokenLine {
+  tokens: Token[];
+}
+
 class PatternMatcher implements TokenRuleMatcher {
   private readonly pattern: RegExp;
   private readonly category: Category;
@@ -130,8 +134,8 @@ class ChoicesMatcher implements TokenRuleMatcher {
   }
 }
 
-function toMatchers(rules: TokenRule[]): TokenRuleMatcher[] {
-  return rules.map((rule): TokenRuleMatcher => {
+function language(rules: TokenRule[]): Language {
+  let matchers = rules.map((rule): TokenRuleMatcher => {
     if ("pattern" in rule) {
       return new PatternMatcher(rule);
     } else if ("open" in rule && "close" in rule) {
@@ -146,25 +150,54 @@ function toMatchers(rules: TokenRule[]): TokenRuleMatcher[] {
       throw new Error("unrecognised rule");
     }
   });
+
+  return { matchers };
 }
 
-const languages = Object.freeze({
-  d: {
-    matchers: toMatchers([
-      { pattern: /\/\/.*?(?:\r?\n|\u{2028}|\u{2029})/su, category: "comment" },
-      { open: "/*", close: "*/", category: "comment" },
-      { open: "/+", close: "+/", nestable: true, category: "comment" },
+export const languages = Object.freeze({
+  "c#": language([
+    { pattern: /\/\/.*?(?:\r?\n|\u{2028}|\u{2029})/su, category: "comment" },
+    { open: "/*", close: "*/", category: "comment" },
 
-      {
-        choices: `
+    {
+      choices: `
           { } / /= . .. ... & &= && | |= || - -= -- + += ++ < <= << <<= > >= >>= >>>= >> >>> ! !=
           ( ) [ ] ? , ; : $ = == * *= % %= ^ ^= ^^ ^^= ~ ~= @ =>
         `.split(/\s+/),
-        category: "punctuation",
-      },
+      category: "punctuation",
+    },
 
-      {
-        choices: `
+    {
+      choices: `
+          abstract as base bool break byte case catch char checked class const continue decimal
+          default delegate do double else enum event explicit extern false finally fixed float for
+          foreach goto if implicit in int interface internal is lock long namespace new null object
+          operator out override params private protected public readonly ref return sbyte sealed
+          short sizeof stackalloc static string struct switch this throw true try typeof uint ulong
+          unchecked unsafe ushort using virtual void volatile while
+        `.split(/\s+/),
+      category: "keyword",
+    },
+    { pattern: /[_A-Za-z]\w*/u, category: "name" },
+
+    { pattern: /[ \f\r\n\u{2028}\u{2029}]+/u, category: "whitespace" },
+  ]),
+
+  d: language([
+    { pattern: /\/\/.*?(?:\r?\n|\u{2028}|\u{2029})/su, category: "comment" },
+    { open: "/*", close: "*/", category: "comment" },
+    { open: "/+", close: "+/", nestable: true, category: "comment" },
+
+    {
+      choices: `
+          { } / /= . .. ... & &= && | |= || - -= -- + += ++ < <= << <<= > >= >>= >>>= >> >>> ! !=
+          ( ) [ ] ? , ; : $ = == * *= % %= ^ ^= ^^ ^^= ~ ~= @ =>
+        `.split(/\s+/),
+      category: "punctuation",
+    },
+
+    {
+      choices: `
           abstract alias align asm assert auto bool break byte case cast catch char class const
           continue creal dchar debug default delegate deprecated do double else enum export extern
           false final finally float for foreach foreach_reverse function goto if immutable import
@@ -175,14 +208,13 @@ const languages = Object.freeze({
           __FILE_FULL_PATH__ __FUNCTION__ __LINE__ __MODULE__ __PRETTY_FUNCTION__ __gshared
           __parameters __rvalue __traits __vector
         `.split(/\s+/),
-        category: "keyword",
-      },
-      { pattern: /[_A-Za-z]\w*/u, category: "name" },
+      category: "keyword",
+    },
+    { pattern: /[_A-Za-z]\w*/u, category: "name" },
 
-      { pattern: /[ \f\r\n\u{2028}\u{2029}]+/u, category: "whitespace" },
-    ]),
-  },
-} satisfies Record<string, Language>);
+    { pattern: /[ \f\r\n\u{2028}\u{2029}]+/u, category: "whitespace" },
+  ]),
+});
 
 interface RuleMatch {
   match: string;
@@ -193,8 +225,8 @@ interface TokenRuleMatcher {
   tryMatch(s: string): RuleMatch | undefined;
 }
 
-function tokenise(code: string, matchers: TokenRuleMatcher[]): Token[] {
-  let tokens = [];
+function tokenise(code: string, matchers: TokenRuleMatcher[]): TokenLine[] {
+  let lines: TokenLine[] = [];
 
   while (code.length > 0) {
     let ruleMatches = matchers
@@ -211,11 +243,32 @@ function tokenise(code: string, matchers: TokenRuleMatcher[]): Token[] {
       }
     }
 
-    tokens.push({ category: longest.category, value: longest.match });
+    let line = lines.at(-1);
+    if (line === undefined) {
+      line = { tokens: [] };
+      lines.push(line);
+    }
+
+    if (longest.match.includes("\n")) {
+      // julienne the token into multiple lines
+      let [first, ...rest] = longest.match.split("\n");
+      if (first.length > 0) {
+        line.tokens.push({ category: longest.category, value: first });
+      }
+
+      lines.push(
+        ...rest.map((part) => ({
+          tokens: part.length > 0 ? [{ category: longest.category, value: part }] : [],
+        })),
+      );
+    } else {
+      line.tokens.push({ category: longest.category, value: longest.match });
+    }
+
     code = code.slice(longest.match.length);
   }
 
-  return tokens;
+  return lines;
 }
 
 function escapeForHtmlText(s: string): string {
@@ -232,21 +285,27 @@ function escapeForHtmlText(s: string): string {
   });
 }
 
-function toHtml(tokens: Token[]): string {
+function toHtml(lines: TokenLine[]): string {
   let result = "";
 
-  for (let token of tokens) {
-    let tag = `hl-${token.category}`;
-    result += `<${tag}>${escapeForHtmlText(token.value)}</${tag}>`;
+  for (let line of lines) {
+    result += `<hl-line>`;
+
+    for (let token of line.tokens) {
+      let tag = `hl-${token.category}`;
+      result += `<${tag}>${escapeForHtmlText(token.value)}</${tag}>`;
+    }
+
+    result += `</hl-line>\n`;
   }
 
-  return result;
+  return result.trim();
 }
 
-export function highlight(code: string, language: string): string {
-  let lang = (languages as Record<string, Language | undefined>)[language];
+export function highlight(code: string, language: keyof typeof languages): string {
+  let lang = languages[language] as Language | undefined;
   if (!lang) {
-    throw new Error(`no highlighting defined for language '${language}'`);
+    throw new Error(`no grammar defined for language '${language}'`);
   }
 
   return toHtml(tokenise(code, lang.matchers));

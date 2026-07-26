@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { highlight } from "$lib/highlighting";
+  import { highlight, type languages } from "$lib/highlighting";
 
   interface Props {
-    language: string;
+    language: keyof typeof languages;
     code: string;
   }
 
@@ -35,20 +35,31 @@
 <style>
   pre {
     max-width: none;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
   }
 
   code {
     display: block;
     max-width: none;
+
     padding-inline: 1.25rem;
     padding-block: 1.25rem;
     /* optically align vs line-height */
     padding-block-end: 1.1rem;
 
-    text-box: trim-both cap alphabetic;
+    line-height: var(--font-mono-leading-0);
   }
 
   :global {
+    hl-line {
+      display: inline-block;
+    }
+
+    hl-line + hl-line {
+      margin-block-start: 0.3em;
+    }
+
     hl-keyword {
       color: var(--c-accent1);
       font-weight: var(--font-mono-weight-1);
