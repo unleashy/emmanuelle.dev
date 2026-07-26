@@ -33,4 +33,8 @@
   header {
     margin-block-start: calc(var(--app-padding) * 2);
   }
+
+  main {
+    margin-inline: auto;
+  }
 </style>

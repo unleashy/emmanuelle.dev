@@ -42,7 +42,7 @@
 
   .draft-badge {
     display: inline-block;
-    align-self: center;
+    align-self: start;
 
     padding: 1ex 1rem;
     line-height: 1;
@@ -55,5 +55,9 @@
     color: white;
 
     border-radius: 1rem;
+
+    @container (width >= 35ch) {
+      align-self: center;
+    }
   }
 </style>

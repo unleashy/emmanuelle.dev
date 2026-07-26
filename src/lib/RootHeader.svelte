@@ -29,6 +29,9 @@
   .heading {
     display: flex;
 
+    max-width: var(--measure);
+    margin-inline: auto;
+
     font-size: var(--t-0);
     font-weight: inherit;
     line-height: 1;

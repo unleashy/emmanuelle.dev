@@ -34,7 +34,6 @@
 
 <style>
   pre {
-    max-width: none;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     hyphens: none;
@@ -42,7 +41,6 @@
 
   code {
     display: block;
-    max-width: none;
 
     padding-inline: 1.75rem;
     padding-block: 1.75rem;

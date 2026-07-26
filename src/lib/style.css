@@ -58,7 +58,7 @@
   --font-mono-weight-1: 475;
   --font-mono-weight-2: 550;
 
-  --measure: 60ch;
+  --measure: 70ch;
 
   --app-padding: 0.8rem;
 
@@ -78,7 +78,10 @@ body,
 div,
 nav,
 main,
+header,
 footer,
+pre,
+code,
 emma-layout,
 emma-flow {
   max-width: none;
