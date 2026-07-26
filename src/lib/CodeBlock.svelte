@@ -70,7 +70,8 @@
     }
 
     hl-comment {
-      color: var(--c-slight-fg);
+      color: light-dark(#473b1f, #fef6bac0);
+      background-color: light-dark(#f4dd0016, #ffaa001e);
     }
   }
 </style>
