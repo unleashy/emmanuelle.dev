@@ -1,6 +1,7 @@
 <script lang="ts">
   import Post from "$lib/Post.svelte";
   import CodeBlock from "$lib/CodeBlock.svelte";
+  import Btw from "$lib/Btw.svelte";
 </script>
 
 <Post
@@ -135,7 +136,7 @@
   <p>
     This is <strong>pull parsing</strong>. You pull what you want out of the parser (which is the
     lexer in this case!), instead of it giving you what you think you want. Kinda like a claw
-    machine at the arcade. But like. Much, much easier. Painless really.
+    machine at the arcade. But like. Much, much easier, painless really, etc.
   </p>
 
   <h2>Actually implementing it</h2>
@@ -201,6 +202,15 @@
   <p>
     Note how this is nearly the same structure, but with the outer loop being driven by the caller.
   </p>
+
+  <Btw>
+    In languages with
+    <a href="https://en.wikipedia.org/wiki/Generator_(computer_programming)">generator</a> support
+    like C#, Javascript, Ruby, etc. you can trivially transform a tokeniser into an iterator by
+    replacing
+    <code>return</code>
+    with <code>yield</code> (or its equivalent in your language of choice).
+  </Btw>
 
   <p>
     De-encapsulate one more time, letting the caller control token matching: that’s the

@@ -1,11 +1,5 @@
-/**
- * Generated with Radix Colours (https://www.radix-ui.com/colors/custom)
- * Accent: #ff9fb7
- * Grey: #8e8c99 (light), #6f6d78 (dark)
- * Background: #fdfcfd (light), #121113 (dark)
- */
-
 :root {
+  /* Light */
   --c-l-pink-1: #fdf9fa;
   --c-l-pink-2: #fef3f5;
   --c-l-pink-3: #ffe5ea;
@@ -68,6 +62,7 @@
   --c-l-grey-indicator: #8a8895;
   --c-l-grey-track: #8a8895;
 
+  /* Dark */
   --c-d-pink-1: #161011;
   --c-d-pink-2: #1d1416;
   --c-d-pink-3: #331a20;
@@ -129,4 +124,31 @@
   --c-d-grey-surface: rgba(0, 0, 0, 0.05);
   --c-d-grey-indicator: #6f6d78;
   --c-d-grey-track: #6f6d78;
+
+  /* Extras */
+  --c-l-blue-1: #fbfdff;
+  --c-l-blue-2: #f4faff;
+  --c-l-blue-3: #e6f4fe;
+  --c-l-blue-4: #d5efff;
+  --c-l-blue-5: #c2e5ff;
+  --c-l-blue-6: #acd8fc;
+  --c-l-blue-7: #8ec8f6;
+  --c-l-blue-8: #5eb1ef;
+  --c-l-blue-9: #0090ff;
+  --c-l-blue-10: #0588f0;
+  --c-l-blue-11: #0d74ce;
+  --c-l-blue-12: #113264;
+
+  --c-d-blue-1: #0d1520;
+  --c-d-blue-2: #111927;
+  --c-d-blue-3: #0d2847;
+  --c-d-blue-4: #003362;
+  --c-d-blue-5: #004074;
+  --c-d-blue-6: #104d87;
+  --c-d-blue-7: #205d9e;
+  --c-d-blue-8: #2870bd;
+  --c-d-blue-9: #0090ff;
+  --c-d-blue-10: #3b9eff;
+  --c-d-blue-11: #70b8ff;
+  --c-d-blue-12: #c2e6ff;
 }

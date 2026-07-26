@@ -37,18 +37,33 @@
     max-width: none;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
+    hyphens: none;
   }
 
   code {
     display: block;
     max-width: none;
 
-    padding-inline: 1.25rem;
-    padding-block: 1.25rem;
-    /* optically align vs line-height */
-    padding-block-end: 1.1rem;
+    padding-inline: 1.75rem;
+    padding-block: 1.75rem;
+    /* optically align vs line-height (no maths here just vibes) */
+    padding-block-end: 1.5rem;
 
+    font-weight: var(--font-mono-weight-0);
     line-height: var(--font-mono-leading-0);
+
+    border: 2px solid var(--c-code-border);
+
+    border-radius: 1rem;
+    @supports (corner-shape: squircle) {
+      border-radius: 2rem;
+      corner-shape: squircle;
+    }
+
+    &::before,
+    &::after {
+      content: none;
+    }
   }
 
   :global {
@@ -62,7 +77,7 @@
 
     hl-keyword {
       color: var(--c-accent1);
-      font-weight: var(--font-mono-weight-1);
+      font-weight: var(--font-mono-weight-2);
     }
 
     hl-punctuation {

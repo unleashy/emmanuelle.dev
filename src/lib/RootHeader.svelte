@@ -10,7 +10,7 @@
 
 {#snippet link()}
   <a href={resolve("/")}>
-    <div class="flower" role="presentation"></div>
+    <emma-flower role="presentation"></emma-flower>
     <span class="name">emmablog</span>
   </a>
 {/snippet}
@@ -63,7 +63,9 @@
     }
   }
 
-  .flower {
+  emma-flower {
+    display: inline-block;
+
     height: 1.25em;
     aspect-ratio: 1;
 
