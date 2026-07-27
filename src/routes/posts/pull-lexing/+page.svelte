@@ -240,10 +240,7 @@
     `}
   />
 
-  <p>
-    Create a method like this for every sort of token you have and that’s it! You may call each
-    method at will,
-  </p>
+  <p>Create a method like this for every sort of token you have and that’s it!</p>
 
   <p>
     And yes, you can go the other way. If you only have a pull lexer, and you want a tokeniser for
@@ -276,4 +273,30 @@
         }
     `}
   />
+
+  <hr />
+
+  <p>
+    That’s basically it! Pull lexers are surprisingly powerful exactly because of their simplicity,
+    though this does come at the cost of not being particularly well-encapsulated; I think this
+    tradeoff is worth it.
+  </p>
+
+  <p>
+    If you want to know more, <a href="https://youtu.be/_GrHKyUYyRc">this talk by Jonathan Müller</a
+    > is a really good watch; it applies pull parsing to the subject of efficient JSON parsing.
+  </p>
+
+  <p>
+    Anyway, this is my first blog post basically ever but I really enjoy coding and/or talking about
+    lexers, parsers, type systems, and generally everything about compilers, and I thought there was
+    relatively little online about pull lexers specifically.
+  </p>
+
+  <p>
+    Maybe in the future I will write more about topics in this same area, or maybe not (for some
+    reason I kind of want to write about counting sort lol).
+  </p>
+
+  <p>I hope you enjoyed reading! ♡</p>
 </Post>

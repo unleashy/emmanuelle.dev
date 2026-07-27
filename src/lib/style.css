@@ -292,11 +292,6 @@ hr {
   }
 }
 
-hr,
-hr + * {
-  --flow-gap: 2rem;
-}
-
 img,
 video,
 canvas,
@@ -329,6 +324,14 @@ emma-flow,
    */
   & > * + * {
     margin-block-start: var(--flow-gap, 1.25em);
+  }
+
+  & > hr {
+    --flow-gap: 2.5rem;
+  }
+
+  & > hr + * {
+    --flow-gap: 2rem;
   }
 }
 
