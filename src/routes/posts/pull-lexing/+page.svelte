@@ -7,8 +7,7 @@
 <Post
   title="Pull lexing"
   summary="Spilling the guts of the lexer out so the parser can play with the giblets"
-  date="2026-07-24"
-  draft
+  date="2026-07-28"
 >
   <p>
     When parsing a programming language, you usually call into a lexer that will read the source

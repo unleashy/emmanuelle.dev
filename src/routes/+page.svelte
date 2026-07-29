@@ -24,13 +24,15 @@
 <ol role="list" reversed class="article-list flow">
   {#each data.posts as post (post.slug)}
     <li>
-      <h2>
-        <a href={resolve(`/posts/${post.slug}`)} class="article-link">
-          <span>{post.title}</span>
-        </a>
-      </h2>
-      <div class="time">
-        <PostDate date={post.date} />
+      <div class="article-title">
+        <h2>
+          <a href={resolve(`/posts/${post.slug}`)} class="article-link">
+            <span>{post.title}</span>
+          </a>
+        </h2>
+        <div class="time">
+          <PostDate date={post.date} />
+        </div>
       </div>
       <p>{post.summary}</p>
     </li>
@@ -53,24 +55,22 @@
   }
 
   .article-list > * {
-    display: grid;
-    column-gap: 0.5rem;
-    row-gap: 0.5rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .article-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    flex-direction: column;
 
     @container (width >= 35ch) {
-      grid-template-columns: 1fr auto;
-      grid-template-areas:
-        "title time"
-        "desc  desc";
-
-      & > .time {
-        justify-self: flex-end;
-      }
-
-      & > p {
-        grid-area: desc;
-      }
+      align-items: baseline;
+      flex-direction: row;
     }
   }
 

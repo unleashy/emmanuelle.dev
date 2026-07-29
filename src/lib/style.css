@@ -242,7 +242,7 @@ ol {
   padding-inline-start: 2rem;
 }
 
-li::marker {
+ul li::marker {
   content: "•  ";
 }
 
