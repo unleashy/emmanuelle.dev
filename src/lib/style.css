@@ -19,7 +19,7 @@
   --c-app-bg: light-dark(var(--c-l-grey-1), var(--c-d-grey-1));
   --c-app-fg: light-dark(var(--c-l-grey-12), var(--c-d-grey-12));
 
-  --c-link-fg: light-dark(var(--c-l-pink-9), var(--c-d-pink-11));
+  --c-link-fg: light-dark(var(--c-l-pink-10), var(--c-d-pink-11));
   --c-link-fg-hover: light-dark(var(--c-l-pink-12), var(--c-d-pink-12));
   --c-link-fg-active: light-dark(var(--c-l-pink-1), var(--c-d-pink-1));
   --c-link-border: light-dark(var(--c-l-pink-a6), var(--c-d-pink-7));
